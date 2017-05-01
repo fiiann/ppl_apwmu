@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_identitas"
+            android:icon="@drawable/ic_face_black_24dp"
+            android:title="Identitas Pribadi" />
+        <item
+            android:id="@+id/nav_ta"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Informasi Tugas Akhir" />
+        <item
+            android:id="@+id/nav_cari"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Pencarian Wisuda" />
+        <item
+            android:id="@+id/nav_jadwal"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Jadwal Wisuda" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Log Out" />
+    </group>
+
+</menu>
