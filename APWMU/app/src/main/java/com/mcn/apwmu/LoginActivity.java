@@ -3,41 +3,47 @@ package com.mcn.apwmu;
 
 
 
-        import android.content.Intent;
-        import android.content.SharedPreferences;
-        import android.support.annotation.NonNull;
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.view.Menu;
-        import android.view.MenuItem;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.EditText;
-        import android.widget.Toast;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-        import com.android.volley.AuthFailureError;
-        import com.android.volley.Request;
-        import com.android.volley.RequestQueue;
-        import com.android.volley.Response;
-        import com.android.volley.VolleyError;
-        import com.android.volley.toolbox.StringRequest;
-        import com.android.volley.toolbox.Volley;
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.mcn.apwmu.app.AppConfig;
 
-        import org.json.JSONException;
-        import org.json.JSONObject;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-        import java.util.Collection;
-        import java.util.HashMap;
-        import java.util.Map;
-        import java.util.Set;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
-    public static final String LOGIN_URL = "http://192.168.1.15/ppl/api/login.php";
+
+//    public static final String LOGIN_URL = "http://192.168.43.188/kuliah/ppl/api/login.php";
+    public static final String LOGIN_URL = "http://192.168.1.31/kuliah/ppl/api/login.php";
+    //public static final String LOGIN_URL = "http://192.168.1.6/kuliah/ppl/api_v1/login.php";
 
     public static final String KEY_NIM="nim";
     public static final String KEY_PASSWORD="password";
     public static final String KEY_USERNAME="username";
+    public static final String KEY_STATUS="status";
+
 
     private EditText editTextNim;
     private EditText editTextPassword;
@@ -46,6 +52,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private String nim;
     private String password;
 
+//    oncreate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +66,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         buttonLogin.setOnClickListener(this);
     }
 
-
+//  user login
     private void userLogin() {
         nim = editTextNim.getText().toString().trim();
         password = editTextPassword.getText().toString().trim();
@@ -83,10 +90,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         String r_apiKey = null;
                         String r_nim= null;
                         String r_username= null;
+                        String r_status= null;
+
                         try {
                             r_apiKey = mainObject.getString("apiKey");
                             r_nim= mainObject.getString("nim");
                             r_username= mainObject.getString("username");
+                            r_status= mainObject.getString("status_verif");
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -94,27 +105,36 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
                         SharedPreferences.Editor editor = pref.edit();
 
-
                         editor.putString("apiKey", r_apiKey); // Storing string
                         editor.putString("nim", r_nim);
                         editor.putString("username", r_username);
-//
+                        editor.putString("status_verif", r_status);
+
 
                         editor.commit(); // commit changes
 
                         String apiKey = pref.getString("apiKey", null); // getting String
                         String nim= pref.getString("nim", null); // getting Integer
                         String username= pref.getString("username", null); // getting Integer
-//
+                        String status = pref.getString("status_verif", null);
 
 
-                        Toast.makeText(LoginActivity.this,nim,Toast.LENGTH_LONG).show();
+//                        Intent intent1 = new Intent(LoginActivity.this,DashboardActivity.class);
+//                        intent1.putExtra(KEY_NIM, nim);
+//                        intent1.putExtra(KEY_USERNAME, username);
+//                        startActivity(intent1);
+
 
                         if(apiKey!=null && nim!=null){
+                            Toast.makeText(LoginActivity.this, "Succesfully login",Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(LoginActivity.this,DashboardActivity.class);
                             intent.putExtra(KEY_NIM, nim);
                             intent.putExtra(KEY_USERNAME, username);
+                            intent.putExtra(KEY_STATUS, status);
+
+//                            Toast.makeText(LoginActivity.this, "link status: "+status,Toast.LENGTH_SHORT).show();
                             startActivity(intent);
+                            finish();
                         }
                     }
                 },

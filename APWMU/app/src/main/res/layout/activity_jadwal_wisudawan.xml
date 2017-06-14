@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mcn.apwmu.JadwalWisudawan">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp"
+            android:background="@color/colorWhite"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp">
+            <View
+                android:id="@+id/header_jadwal"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/header_jadwal"
+                android:text="17 Mei 2017  |  Semarang"
+                android:textSize="12sp"
+                android:id="@+id/tanggal"
+                android:textColor="@color/colorWhite"
+                android:layout_marginStart="@dimen/fab_margin"
+                android:layout_marginEnd="@dimen/fab_margin"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:layout_marginStart="@dimen/fab_margin"
+                android:layout_marginEnd="@dimen/fab_margin"
+                android:layout_marginBottom="20dp"
+                android:layout_width="240dp"
+                android:layout_above="@id/tanggal"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="22sp"
+                android:text="Jadwal Wisuda Universitas Diponegoro"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/header_jadwal"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="8sp"
+                android:background="@drawable/oval"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:text="ADMIN"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/tanggal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="@dimen/fab_margin"
+                android:layout_marginEnd="@dimen/fab_margin">
+                <RelativeLayout
+                    android:id="@+id/contentMiddle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+                    <ImageView
+                        android:id="@+id/icon_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:src="@drawable/icon_info"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@id/icon_title"
+                        android:layout_toRightOf="@id/icon_title"
+                        android:text="Informasi umum"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"/>
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="2sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/dummyText"
+                    android:textSize="14sp"/>
+                <RelativeLayout
+                    android:id="@+id/contentMiddle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+                    <ImageView
+                        android:id="@+id/icon_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:src="@drawable/icon_info"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@id/icon_title2"
+                        android:layout_toRightOf="@id/icon_title2"
+                        android:text="Tanggal-tanggal penting"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"/>
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorLine"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 Januari-31 Maret 2017"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Peroide kelulusan bagi peserta wisuda ke-146"
+                    android:layout_marginBottom="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorLine"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="31 Maret 2017"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Batas akhir yudisium/pengumuman kelulusan bagi mahasiswa yang akan mengukuti upacara wisuda"
+                    android:layout_marginBottom="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorLine"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="05 April 2017"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Batas akhir pendaftaran mahasiswa peserta wisuda ke Sub Bagian Akademik Fakultas"
+                    android:layout_marginBottom="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorLine"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="07 April 2017"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Batas akhir pendaftaran wisuda dari Sub Bagian Akademik ke BAA (menyerahkan softcopy dan print out data wisudawan)"
+                    android:layout_marginBottom="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorLine"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10 April 2017"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Batas akhir permintaan dan pengambilan blanko ijazah oleh Kasubag. Akademik Fakultas/PPs kepada Kasubag. Sarana Pendidikan BAA"
+                    android:layout_marginBottom="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorLine"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12 April 2017"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Batas akhir penulisan ijazah oleh Sub Bagian Akademik Fakultas/PPs"
+                    android:layout_marginBottom="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorLine"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="13 April 2017"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Batas akhir penyerahan transkrip dan ijazah yang sudah ditempel pas foto untuk ditandatangani Rektor dari Kasubag. Akademik Fakultas/PPs kepada Kasubag. Sarana Pendidikan BAA Undip"
+                    android:layout_marginBottom="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorLine"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="19 April 2017"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Batas akhir penandatanganan ijazah oleh rektor"
+                    android:layout_marginBottom="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorLine"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="07-12 April 2017"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Proses penyusunan draft CD Album kenangan"
+                    android:layout_marginBottom="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorLine"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="17-21 April 2017"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Cetak CD Album kenangan oleh rekanan"
+                    android:layout_marginBottom="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorLine"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="25 April 2017"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Gladi bersih wisudawan (wajib ikut)"
+                    android:layout_marginBottom="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorLine"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="26-28 April 2017"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Upacara wisuda (wajib diikuti calon wisudawan)"
+                    android:layout_marginBottom="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorLine"/>
+                <RelativeLayout
+                    android:id="@+id/contentMiddle3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+                    <ImageView
+                        android:id="@+id/icon_title3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:src="@drawable/icon_info"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_toEndOf="@id/icon_title3"
+                        android:layout_toRightOf="@id/icon_title3"
+                        android:text="Download jadwal"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:background="@drawable/container_dashboard"
+                    android:text="@string/linkdownload"
+                    android:autoLink="web"
+                    android:id="@+id/link"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

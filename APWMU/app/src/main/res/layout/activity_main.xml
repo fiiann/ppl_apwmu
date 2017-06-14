@@ -4,75 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_apwmu_100"
-    android:orientation="vertical"
-
+    android:background="@drawable/background"
+    android:padding="@dimen/activity_horizontal_margin"
     tools:context="com.mcn.apwmu.MainActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Nama"
-        android:id="@+id/textViewUsername"
-        android:layout_gravity="center_horizontal" />
-
-
-    <ImageButton
-        android:id="@+id/btn_login"
-        android:layout_width="256dp"
-        android:layout_height="53dp"
-        android:clickable="true"
-        android:onClick="go_to_login"
-        android:src="@drawable/btnmenu"
-        android:layout_marginTop="107dp"
-        android:layout_below="@+id/btn_register"
-        android:layout_alignLeft="@+id/btn_cari_wisudawan"
-        android:layout_alignStart="@+id/btn_cari_wisudawan" />
-
-    <ImageButton
-        android:id="@+id/btn_cari_wisudawan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:onClick="cariWisudawanHalaman"
-        android:src="@drawable/m_cari_wisudawan"
-
-        android:layout_marginRight="33dp"
-        android:layout_marginEnd="33dp"
-        android:layout_below="@+id/btn_jadwal_wisuda"
-        android:layout_alignRight="@+id/btn_register"
-        android:layout_alignEnd="@+id/btn_register" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="register"
-        android:id="@+id/btn_register"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="26dp"
-        android:layout_marginEnd="26dp" />
-
-    <ImageButton
-        android:id="@+id/btn_jadwal_wisuda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:src="@drawable/m_jadwal_wisuda"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="-67dp"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/btn_login"
-        android:layout_alignStart="@+id/btn_login" />
-
-
 
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:src="@drawable/logotagline"
-        android:layout_marginTop="26dp"
-        android:layout_below="@+id/btn_cari_wisudawan"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/logo2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/logo2"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="30dp"
+        android:layout_centerVertical="false"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageButton
+        android:layout_marginStart="@dimen/mainActivity"
+        android:layout_marginEnd="@dimen/mainActivity"
+        android:layout_below="@id/logo2"
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/heightHome"
+        android:clickable="true"
+        android:onClick="go_to_login"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_login"
+        android:layout_marginTop="50dp"/>
+
+    <ImageButton
+        android:layout_marginStart="@dimen/mainActivity"
+        android:layout_marginEnd="@dimen/mainActivity"
+        android:id="@+id/btn_cari_wisudawan"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/heightHome"
+        android:clickable="true"
+        android:onClick="cariJadwalWisuda"
+        android:layout_marginTop="@dimen/btnMarginHome"
+        android:background="@drawable/button_jadwal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btn_login" />
+
+    <ImageButton
+        android:layout_marginStart="@dimen/mainActivity"
+        android:layout_marginEnd="@dimen/mainActivity"
+        android:id="@+id/btn_jadwal_wisuda"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/heightHome"
+        android:clickable="true"
+        android:onClick="cariWisudawanHalaman"
+        android:background="@drawable/button_cari"
+        android:layout_below="@id/btn_cari_wisudawan"
+        android:layout_marginTop="@dimen/btnMarginHome"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:src="@drawable/tagline2"
+        android:visibility="visible"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"/>
 </RelativeLayout>

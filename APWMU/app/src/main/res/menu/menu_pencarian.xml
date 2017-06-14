@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mcn.apwmu.PencarianActivity">
+    <item
+        android:id="@+id/spinner"
+        android:title="Fakultas"
+        app:actionViewClass="android.widget.Spinner"
+        android:background="#b1c2ff"
+        app:showAsAction="always" />
+</menu>

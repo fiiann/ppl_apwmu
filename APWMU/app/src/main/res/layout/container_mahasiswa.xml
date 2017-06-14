@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mcn.apwmu.AdapterMahasiswa">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:scaleType="fitXY"
+        android:layout_height="70dp"
+        android:id="@+id/i_mhs"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="mahasiswa name"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        android:id="@+id/textMhsName"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/i_mhs"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textMhsNim"
+        android:textSize="11sp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/textMhsName"
+        android:layout_toRightOf="@id/i_mhs"
+        android:layout_toEndOf="@id/i_mhs"
+        android:textColor="#666"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="fakultas"
+        android:textSize="11sp"
+        android:id="@+id/textMhsFakultas"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/textMhsNim"
+        android:layout_toRightOf="@id/i_mhs"
+        android:textColor="#666"/>
+
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@id/i_mhs"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLine"/>
+
+
+</RelativeLayout>

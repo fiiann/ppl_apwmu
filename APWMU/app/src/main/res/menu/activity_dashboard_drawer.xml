@@ -3,24 +3,28 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/icon_dashboard"
+            android:title="Dashboard"/>
+        <item
             android:id="@+id/nav_identitas"
-            android:icon="@drawable/ic_face_black_24dp"
-            android:title="Identitas Pribadi" />
+            android:icon="@drawable/icon_person"
+            android:title="Identitas Pribadi"/>
         <item
             android:id="@+id/nav_ta"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/icon_tugas_akhir"
             android:title="Informasi Tugas Akhir" />
         <item
             android:id="@+id/nav_cari"
-            android:icon="@drawable/ic_menu_share"
+            android:icon="@drawable/icon_pencarian"
             android:title="Pencarian Wisuda" />
         <item
             android:id="@+id/nav_jadwal"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/icon_jadwal"
             android:title="Jadwal Wisuda" />
         <item
             android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/icon_logout"
             android:title="Log Out" />
     </group>
 

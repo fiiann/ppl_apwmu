@@ -7,44 +7,88 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".app.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--<activity android:name=".MainActivity" />-->
-        <activity android:name=".MainActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+        <!-- <activity android:name=".MainActivity" /> -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".SplashScreen">
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<activity-->
-            <!--android:name=".LoginActivity"-->
-            <!--android:label="@string/title_activity_login" />-->
-        <activity android:name=".CariWisudaActivity" />
+        <!-- <activity -->
+        <!-- android:name=".LoginActivity" -->
+        <!-- android:label="@string/title_activity_login" /> -->
+        <activity
+            android:name=".CariWisudaActivity"
+            android:label="@string/title_cari_wisuda"
+            android:screenOrientation="portrait" />
         <activity android:name=".DaftarWisudawanActivity" />
         <activity
             android:name=".DashboardActivity"
-            android:label="@string/title_activity_dashboard"
+            android:label="@string/title_dashboard"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RegisterActivity">
-
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".JadwalWisudawan"
+            android:label="@string/title_jadwal_wisuda"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".f_identitas_pribadi"
+            android:label="@string/title_activity_f_identitas_pribadi"
+            android:parentActivityName=".DashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mcn.apwmu.DashboardActivity" />
         </activity>
-        <activity android:name=".LoginActivity">
-
+        <activity
+            android:name=".f_tugas_akhir"
+            android:label="@string/title_activity_f_tugas_akhir"
+            android:parentActivityName=".DashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mcn.apwmu.DashboardActivity" />
         </activity>
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- <activity android:name=".CariFakultas" /> -->
+        <activity
+            android:name=".PencarianActivity"
+            android:label="@string/title_activity_pencarian"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

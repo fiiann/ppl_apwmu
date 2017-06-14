@@ -1,18 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:padding="@dimen/fab_margin"
+    android:background="#f1f1f1"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.mcn.apwmu.DashboardActivity"
     tools:showIn="@layout/app_bar_dashboard">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="7dp"
+        android:id="@+id/sectionOne">
+
+        <ImageView
+            android:layout_gravity="start"
+            android:layout_width="0dp"
+            android:id="@+id/d_foto"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:translationX="-5dp"
+            android:src="@drawable/dummy"/>
+        <RelativeLayout
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:translationY="-8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:textSize="11sp"
+                android:background="@drawable/container_dashboard"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:textAlignment="center"
+                android:text="Status Verifikasi"
+                android:id="@+id/textView" />
+            <ImageView
+                android:contentDescription="@string/image_verif"
+                android:translationY="20dp"
+                android:id="@+id/d_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nverif"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:translationY="2dp"
+        android:text="Informasi Umum"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_below="@id/sectionOne"
+        android:background="@drawable/container_title"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/text_title"
+        android:textSize="12sp"/>
+
+    <LinearLayout
+        android:id="@+id/sectionTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_title"
+        android:baselineAligned="false"
+        android:layout_marginBottom="15dp"
+        android:padding="@dimen/fab_margin"
+        android:background="@drawable/container_content">
+
+        <RelativeLayout
+            android:id="@+id/leftSection"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="@dimen/marginDash"
+                android:layout_marginBottom="@dimen/marginDash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIM"
+                android:textColor="@color/colorMuted"
+                android:id="@+id/text_nim"
+                android:textSize="@dimen/normalsp"/>
+            <TextView
+                android:layout_marginTop="@dimen/marginDash"
+                android:layout_marginBottom="@dimen/marginDash"
+                android:layout_below="@id/text_nim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorMuted"
+                android:text="Nama lengkap"
+                android:id="@+id/text_nama"
+                android:textSize="@dimen/normalsp"/>
+            <TextView
+                android:layout_marginTop="@dimen/marginDash"
+                android:layout_marginBottom="@dimen/marginDash"
+                android:layout_below="@id/text_nama"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorMuted"
+                android:layout_height="wrap_content"
+                android:text="Fakultas"
+                android:id="@+id/text_fakultas"
+                android:textSize="@dimen/normalsp"/>
+            <TextView
+                android:layout_marginTop="@dimen/marginDash"
+                android:layout_marginBottom="@dimen/marginDash"
+                android:layout_below="@id/text_fakultas"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorMuted"
+                android:layout_height="wrap_content"
+                android:text="Program studi"
+                android:id="@+id/text_prodi"
+                android:textSize="@dimen/normalsp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rightSection"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:paddingLeft="20dp"
+            android:paddingRight="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="@dimen/marginDash"
+                android:layout_marginBottom="@dimen/marginDash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:text="NIM"
+                android:id="@+id/d_nim"
+                android:textSize="@dimen/normalsp"/>
+            <TextView
+                android:layout_marginTop="@dimen/marginDash"
+                android:layout_marginBottom="@dimen/marginDash"
+                android:layout_below="@id/d_nim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:maxLength="22"
+                android:text="Nama Lengkap"
+                android:id="@+id/d_nama"
+                android:textSize="@dimen/normalsp"/>
+            <TextView
+                android:layout_marginTop="@dimen/marginDash"
+                android:layout_marginBottom="@dimen/marginDash"
+                android:layout_below="@id/d_nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:text="Fakultas"
+                android:id="@+id/d_fakultas"
+                android:textSize="@dimen/normalsp"/>
+            <TextView
+                android:layout_marginTop="@dimen/marginDash"
+                android:layout_marginBottom="@dimen/marginDash"
+                android:layout_below="@id/d_fakultas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:text="Program Studi"
+                android:id="@+id/d_prodi"
+                android:textSize="@dimen/normalsp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/sectionTwo">
+
+        <Button
+            android:id="@+id/btn_identitas"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:onClick="identitasPribadi"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/btn_identitas"/>
+
+        <Button
+            android:id="@+id/btn_informasi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:onClick="informasiTugasAkhir"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/btn_informasi"/>
+
+        <Button
+            android:id="@+id/btn_pencarian"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:onClick="cariWisudawanUndip"
+            android:background="@drawable/btn_pencarian"/>
+
+    </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ini dashboard"
-        android:id="@+id/d_nama"
-        android:textSize="50dp"/>
-</LinearLayout>
+        android:id="@+id/foto"
+        android:textSize="10dp"
+        android:visibility="invisible"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_status"
+        android:textSize="10dp"
+        android:visibility="invisible"/>
+</RelativeLayout>

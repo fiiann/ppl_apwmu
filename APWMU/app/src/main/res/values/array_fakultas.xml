@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string-array name="fakultas_array">
+        <item>Fakultas</item>
+        <item>FSM</item>
+        <item>FK</item>
+        <item>FT</item>
+        <item>FIB</item>
+        <item>FEB</item>
+        <item>Hukum</item>
+        <item>Fisip</item>
+    </string-array>
+</resources>

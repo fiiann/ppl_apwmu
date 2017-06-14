@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/fab_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mcn.apwmu.f_tugas_akhir"
+    tools:showIn="@layout/activity_f_tugas_akhir">
+    <RelativeLayout
+        android:id="@+id/contentTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fab_margin"
+        android:background="@drawable/container_dashboard"
+        android:layout_marginBottom="6dp">
+
+        <ImageView
+            android:id="@+id/t_foto"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/dummy"/>
+        <TextView
+            android:id="@+id/t_namas"
+            android:layout_toEndOf="@id/t_foto"
+            android:layout_toRightOf="@id/t_foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:text="Hazel Lukman"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="19sp"/>
+        <TextView
+            android:id="@+id/d_fakultas1"
+            android:layout_below="@id/t_namas"
+            android:layout_toEndOf="@id/t_foto"
+            android:layout_toRightOf="@id/t_foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fakultas Sains dan Matematika"
+            android:textColor="@color/colorBlack"
+            android:textSize="11sp"/>
+        <TextView
+            android:id="@+id/d_jurusan1"
+            android:layout_below="@id/d_fakultas1"
+            android:layout_toEndOf="@id/t_foto"
+            android:layout_toRightOf="@id/t_foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ilmu Komputer"
+            android:textColor="@color/colorBlack"
+            android:textSize="11sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contentMiddle"
+        android:layout_below="@id/contentTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/container_dashboard">
+        <ImageView
+            android:id="@+id/icon_title"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@drawable/icon_info"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@id/icon_title"
+            android:layout_toRightOf="@id/icon_title"
+            android:text="Jenjang Pendidikan S1"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contentBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contentMiddle"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/container_dashboard">
+        <RelativeLayout
+            android:id="@+id/leftSection"
+            android:layout_width="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:layout_marginTop="@dimen/marginDetail"
+                android:layout_marginBottom="@dimen/marginDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pembimbing 1"
+                android:textColor="@color/colorMuted"
+                android:id="@+id/text_pembimbing_satu"
+                android:textSize="@dimen/bigsp"/>
+            <!--<TextView-->
+            <!--android:layout_marginTop="@dimen/marginDetail"-->
+            <!--android:layout_marginBottom="@dimen/marginDetail"-->
+            <!--android:layout_below="@id/text_pembimbing_satu"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/colorMuted"-->
+            <!--android:text="Pembimbing 2"-->
+            <!--android:id="@+id/text_pembimbing_dua"-->
+            <!--android:textSize="@dimen/bigsp"/>-->
+            <TextView
+                android:layout_marginTop="@dimen/marginDetail"
+                android:layout_marginBottom="@dimen/marginDetail"
+                android:layout_below="@id/text_pembimbing_satu"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorMuted"
+                android:layout_height="70sp"
+                android:text="Judul TA"
+                android:height="70sp"
+                android:id="@+id/text_judul_ta"
+                android:textSize="@dimen/bigsp"/>
+
+
+            <TextView
+                android:layout_marginTop="@dimen/marginDetail"
+                android:layout_marginBottom="@dimen/marginDetail"
+                android:layout_below="@id/text_judul_ta"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorMuted"
+                android:layout_height="wrap_content"
+                android:text="IPK"
+                android:id="@+id/text_ipk"
+                android:textSize="@dimen/bigsp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rightSection"
+            android:layout_toRightOf="@id/leftSection"
+            android:layout_width="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:layout_marginTop="@dimen/marginDetail"
+                android:layout_marginBottom="@dimen/marginDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:text=""
+                android:id="@+id/d_pembimbing_satu"
+                android:textSize="@dimen/bigsp"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/marginDetail"
+                android:layout_marginBottom="@dimen/marginDetail"
+                android:layout_below="@id/d_pembimbing_satu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:text=""
+                android:id="@+id/d_judul_ta"
+                android:textSize="@dimen/bigsp"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/marginDetail"
+                android:layout_marginBottom="@dimen/marginDetail"
+                android:layout_below="@id/d_judul_ta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:text=""
+                android:id="@+id/d_ipk"
+                android:textSize="@dimen/bigsp"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t_link"
+        android:visibility="invisible"/>
+</LinearLayout>

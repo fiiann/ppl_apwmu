@@ -4,32 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_apwmu_100"
-    android:orientation="vertical"
-    android:weightSum="1">
+    android:background="@drawable/background">
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:translationY="-35dp"
+        android:src="@drawable/logo1"/>
 
     <ImageView
         android:id="@+id/logotext"
-        android:layout_width="180dp"
-        android:layout_height="42dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
         android:layout_gravity="center"
-        android:layout_weight="0.04"
-        android:src="@drawable/logotext"
+        android:src="@drawable/tagline2"
         android:visibility="visible"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="112dp" />
+        android:layout_marginBottom="40dp" />
 
-    <!--<ImageView-->
-        <!--android:id="@+id/logos"-->
-        <!--android:layout_width="180dp"-->
-        <!--android:layout_height="142dp"-->
-        <!--android:layout_gravity="center"-->
-        <!--android:layout_weight="0.04"-->
-        <!--android:src="@drawable/logo"-->
-        <!--android:visibility="visible"-->
-        <!--android:layout_above="@+id/logotext"-->
-        <!--android:layout_alignLeft="@+id/logotext"-->
-        <!--android:layout_alignStart="@+id/logotext"-->
-        <!--android:layout_marginBottom="88dp" />-->
 </RelativeLayout>

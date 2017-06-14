@@ -7,11 +7,11 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import static com.mcn.apwmu.R.id.textView;
+
 
 
 public class MainActivity extends AppCompatActivity{
-    private TextView textView;
+//    private TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,14 +22,15 @@ public class MainActivity extends AppCompatActivity{
         Intent intent=new Intent(this,LoginActivity.class);
         startActivity(intent);
     }
+
     public void cariWisudawanHalaman(View view){
         Intent myintent = new Intent(this, CariWisudaActivity.class);
         startActivity(myintent);
     }
 
-    public void register(View view){
-        Intent myintentku = new Intent(this, RegisterActivity.class);
-        startActivity(myintentku);
+    public void cariJadwalWisuda(View view){
+        Intent myintent = new Intent(this, JadwalWisudawan.class);
+        startActivity(myintent);
     }
 }
 

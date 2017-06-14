@@ -1,26 +1,44 @@
 <resources>
     <string name="app_name">APWMU</string>
-    <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
+    <string name="title_activity_login">Sign in</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_in_short">MASUK</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."
     </string>
-    <string name="title_activity_cari_wisuda">CariWisudaActivity</string>
-    <string name="title_activity_dashboard">DashboardActivity</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="username">Harum Mualimus S</string>
+    <!-- Activity Label  -->
+    <string name="title_cari_wisuda">Pencarian Wisudawan</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_jadwal_wisuda">Jadwal Wisuda</string>
+    <string name="title_list_cari">Daftar Wisudawan</string>
+    <string name="title_identitas_pribadi">Identitas Pribadi</string>
+    <string name="title_informasi_ta">Informasi Tugas Akhir</string>
 
+    <!-- Additional String -->
+    <string name="title_nav_header">Sistem Informasi Pendaftaran Wisudawan Undip</string>
+    <string name="username">Harum Mualimus S</string>
     <string name="action_settings">Settings</string>
+    <string name="dummyText">
+        Sesuai dengan Kalender Akademik Universitas Diponegoro tahun 2016/2017, serta surat edaran dari Wakil Rektor bidang Akademik dan Kemahasiswaan No. 1210/UN7.P1/TU/2017 tanggal 28 Februari 2017 perihal pelaksanaan upacara wisuda ke -146, dengan ini kami informasikan bahwa Upacara Wisuda ke-146 akan dilaksanakan pada bulan April 2017 dan akan diselenggarakan di Gedung Prof. Soedarto, SH, Undip Kampus Tembalang.
+        Adapun untuk jadwal lengkap persiapan wisuda ke-146, berikut ini kami sampaikan informasinya sebagai berikut :
+    </string>
+    <string name="linkdownload"><a href="http://baa.undip.ac.id/download/rencana-pelaksanaan-wisuda-ke-146-undip/?wpdmdl=6512">http://baa.undip.ac.id/download/rencana-pelaksanaan-wisuda-ke-146-undip/?wpdmdl=6512</a></string>
+
+    <!-- Image Description -->
+    <string name="image_verif">gambar verifikasi</string>
+    <string name="title_activity_f_identitas_pribadi">Informasi Identitas Pribadi</string>
+    <string name="title_activity_f_tugas_akhir">Informasi Tugas Akhir</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_pencarian">PencarianActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>
